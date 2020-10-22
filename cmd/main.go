@@ -4,6 +4,8 @@ import (
 	"context"
 	"github.com/grpc-ecosystem/grpc-gateway/runtime"
 	echo "github.com/realwrtoff/rest_grpc/proto/gen"
+	"google.golang.org/grpc/codes"
+	"google.golang.org/grpc/status"
 	"net/http"
 )
 
@@ -44,7 +46,7 @@ func main() {
 	if err := echo.RegisterCalServiceHandlerServer(ctx, mux, &CalService{}); err != nil {
 		panic(err)
 	}
-	if err := http.ListenAndServe(":80", mux); err != nil {
+	if err := http.ListenAndServe(":21680", mux); err != nil {
 		panic(err)
 	}
 }
