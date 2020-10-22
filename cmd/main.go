@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"github.com/grpc-ecosystem/grpc-gateway/runtime"
-	echo "github.com/realwrtoff/rest_grpc/proto/gen/echo"
+	echo "github.com/realwrtoff/rest_grpc/proto/echo"
 	"net/http"
 )
 
