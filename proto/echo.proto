@@ -1,7 +1,7 @@
 syntax = "proto3";
 package echo;
 
-option go_package = "github.com/realwrtoff/rest_grpc/proto/echo";
+option go_package = "github.com/realwrtoff/grpc-gateway-demo/proto/echo";
 
 import "google/api/annotations.proto";
 
