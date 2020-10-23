@@ -24,10 +24,10 @@ go get -u github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger
 
 ```shell script
 // github上创建空项目
-git clone https://github.com/realwrtoff/rest_grpc.git
+git clone https://github.com/realwrtoff/grpc-gateway-demo.git
 cd rest_grpc
 // mod 管理
-git mod init github.com/realwrtoff/rest_grpc
+git mod init github.com/realwrtoff/grpc-gateway-demo
 // grpc-gateway环境, 注意替换版本号
 mkdir -p ./proto/google/api
 cp $GOPATH/pkg/mod/github.com/grpc-ecosystem/grpc-gateway@v1.15.2/third_party/googleapis/google/api/* ./proto/google/api
@@ -40,7 +40,7 @@ vim echo.proto
 syntax = "proto3";
 package echo;
 
-option go_package = "github.com/realwrtoff/rest_grpc/proto/echo";
+option go_package = "github.com/realwrtoff/grpc-gateway-demo/proto/echo";
 
 import "google/api/annotations.proto";
 
