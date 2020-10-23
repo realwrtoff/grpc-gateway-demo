@@ -6,18 +6,19 @@ option go_package = "github.com/realwrtoff/rest_grpc/proto/echo";
 import "google/api/annotations.proto";
 
 message EchoReq {
-  string value = 1;
+  string name = 2;
+  int32 age = 3;
 }
 
 message EchoRes {
-  string value = 1;
+  string name = 1;
+  int32 age = 2;
 }
 
 service EchoService {
   rpc Echo(EchoReq) returns (EchoRes) {
     option (google.api.http) = {
-      post: "/v1/example/echo",
-      body: "*"
+      get: "/v1/example/echo"
     };
   }
 }

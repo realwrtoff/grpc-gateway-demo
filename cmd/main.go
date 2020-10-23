@@ -12,7 +12,7 @@ import (
 type EchoService struct{}
 
 func (s *EchoService) Echo(ctx context.Context, req *echo.EchoReq) (*echo.EchoRes, error) {
-	return &echo.EchoRes{Value: req.Value}, nil
+	return &echo.EchoRes{Name: req.Name, Age: req.Age + 1}, nil
 }
 
 type CalService struct{}

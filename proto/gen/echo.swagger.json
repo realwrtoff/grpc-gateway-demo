@@ -12,7 +12,7 @@
   ],
   "paths": {
     "/v1/example/echo": {
-      "post": {
+      "get": {
         "operationId": "EchoService_Echo",
         "responses": {
           "200": {
@@ -30,12 +30,17 @@
         },
         "parameters": [
           {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/echoEchoReq"
-            }
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "age",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
           }
         ],
         "tags": [
@@ -95,19 +100,15 @@
         }
       }
     },
-    "echoEchoReq": {
-      "type": "object",
-      "properties": {
-        "value": {
-          "type": "string"
-        }
-      }
-    },
     "echoEchoRes": {
       "type": "object",
       "properties": {
-        "value": {
+        "name": {
           "type": "string"
+        },
+        "age": {
+          "type": "integer",
+          "format": "int32"
         }
       }
     },
