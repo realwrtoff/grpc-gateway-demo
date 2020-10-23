@@ -1,4 +1,4 @@
-module github.com/realwrtoff/rest_grpc
+module github.com/realwrtoff/grpc-gateway-demo
 
 go 1.15
 
